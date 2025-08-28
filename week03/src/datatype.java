@@ -1,5 +1,6 @@
 public class datatype {
     public static void main(String[] args) {
+        //데이터 타입과 형변화
         int score = 87;
         float gpa = 4.13F;  //float는 4바이트, double은 8바이트 둘다 실수임
         System.out.println(score);
