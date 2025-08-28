@@ -1,6 +1,6 @@
 public class datatype {
     public static void main(String[] args) {
-        int score = 100;
+        int score = 87;
         float gpa = 4.13F;  //float는 4바이트, double은 8바이트 둘다 실수임
         System.out.println(score);
         //score = 99.9;
