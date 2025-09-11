@@ -1,36 +1,29 @@
 import java.util.Scanner;
 
-
 public class primeGame {
-    //public static boolean(int n);
+    // 숫자 하나를 넘겨 받아서 해당 수가 소수면 true 리턴, 소수가 false
+    public static boolean isPrime(int n) {
+        if (n <= 1) {
+            return false;
+        } else {
+            for (int i = 2; i <= Math.sqrt(n); i = i + 1) {
+                if (n % i == 0) {
+                    return false;
+                }
 
-
-
+            }
+            return true;
+        }
+    }
     public static void main(String[] args) {
-        //System.out.println(Math.sqrt(25.0)); //수학기호 불러오는법 루트
-
-
-
         Scanner sc = new Scanner(System.in);
         boolean isPrime = true;
         int number = sc.nextInt();
-        if(number <= 1) {
-            isPrime = false;
-        } else {
 
-
-            for (int i = 2; i <= Math.sqrt(number); i = i + 1) {
-                if (number % i == 0) {
-                    isPrime = false; //counter = counter + 1
-                    break;
-                }
-                System.out.print(i + " ");
-            }
-            if (isPrime) {
-                System.out.println(number + " is a prime number");
-            } else {
-                System.out.println(number + " is not a prime number");
-            }
+        if(isPrime(number)){
+            System.out.println(number + "은 소수입니다~");
+        }else{
+            System.out.println(number + "은 소수가 아닙니다~");
         }
     }
 }
