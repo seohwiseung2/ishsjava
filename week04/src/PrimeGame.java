@@ -1,8 +1,11 @@
 import java.util.Scanner;
 
+
 public class PrimeGame {
     public static void main(String[] args) {
         //System.out.println(Math.sqrt(25.0)); //수학기호 불러오는법 루트
+
+
 
         Scanner sc = new Scanner(System.in);
         int counter = 0;
