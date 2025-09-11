@@ -16,14 +16,20 @@ public class primeGame {
         }
     }
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        //Scanner sc = new Scanner(System.in);
         boolean isPrime = true;
-        int number = sc.nextInt();
+        //int number = sc.nextInt();
 
-        if(isPrime(number)){
-            System.out.println(number + "은 소수입니다~");
-        }else{
-            System.out.println(number + "은 소수가 아닙니다~");
+        int[] numbers = {111, 977, 1, 2, 53, 1200};
+
+        for(int i=0; i <6; i++) {
+
+
+            if(isPrime(numbers[i])){
+                System.out.println(numbers[i] + " is a prime number~");
+                }else{
+                    System.out.println(numbers[i] + " is NOT prime number!");
+                }
         }
     }
 }
