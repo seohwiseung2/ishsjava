@@ -14,6 +14,6 @@ public abstract class Pokemon {
     public int gethp() {
         return hp;
     }
-    public abstract void attack(Pokemon_target);
+    public abstract void attack(Pokemon target);
 
 }
