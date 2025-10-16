@@ -1,14 +1,17 @@
 public class GameDemo {
     public static void main(String[] args) {
-        Pikachu myPikachu = new Pikachu(100);
-        Pikachu yourPikachu = new Pikachu(200);
-        Squirtle mySquirtle = new Squirtle(300);
-        Squirtle yourSquirtle = new Squirtle(100);
-        System.out.println("start");
-        myPikachu.attack(yourPikachu);
-        mySquirtle.attack(yourPikachu);
+        Pikachu myPikachu = new Pikachu(100, 27);
+        Pikachu yourPikachu = new Pikachu(100, 28);
+        Squirtle enemySquirtle = new Squirtle(120, 21);
+        System.out.println("Game start~");
+        myPikachu.attack(enemySquirtle);
+        enemySquirtle.attack(myPikachu);
+        myPikachu.attack(enemySquirtle);
+        enemySquirtle.attack(myPikachu);
+        for(int i=0;i<5;i++)
+            enemySquirtle.attack(myPikachu);
 
-
-
+        System.out.println(enemySquirtle);
+        System.out.println(myPikachu);
     }
 }

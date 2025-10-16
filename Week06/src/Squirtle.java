@@ -1,12 +1,16 @@
-public class Squirtle extends Pokemon{
-    public Squirtle(int hp){
-        super("꼬부기", hp);  // 부모클래스의 생성자 호출
-        System.out.println("꼬북꼬북꼬북칩~");
+public class Squirtle extends Pokemon {
+    public Squirtle(int hp, int attackPower){
+        super("꼬부기", hp, attackPower);  // 부모클래스의 생성자 호출
+        System.out.println("꼬북꼬북!");
     }
 
     @Override
     public void attack(Pokemon target) {
-//        System.out.println(getName() + " -> " + target.getName()); // name is private
-        System.out.println(name + " -> " + target.getName() + "에게 '지진' 사용");  // name is protected
+        int damage = getAttackPower() + 2;
+        System.out.println(getName() + " -> " + target.getName() + "에게 '물대포' 사용" + "(데미지: " + damage + ")"); // name is private
+        //target.setHp(target.getHp()-damage);;
+        target.receiveDamage(damage);
+//        System.out.println(name + " -> " + target.getName() + "에게 '물대포' 사용");  // name is protected
+        System.out.println(target.getHp() + "남은 hp" + target.getHp());
     }
 }
