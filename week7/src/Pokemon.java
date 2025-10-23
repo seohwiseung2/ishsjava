@@ -3,14 +3,14 @@ public abstract class Pokemon {
     //    protected String name;
     private int hp;
     private int attackPower;
-    protected Flyable flyingTool; //has-a (Aggregation)
+    protected Flyable flyingTool;  // has-a (Aggregation)
 
 
-
-    public Pokemon(String name, int hp, int attackPower){
+    public Pokemon(String name, int hp, int attackPower, Flyable flyingTool){
         this.name = name;
         this.hp = hp;
         this.attackPower = attackPower;
+        this.flyingTool = flyingTool;
     }
 
     public String getName(){
@@ -38,12 +38,10 @@ public abstract class Pokemon {
     public abstract void attack(Pokemon target);
     public void receiveDamage(int damage){
         hp = hp - damage;
-        if(hp<0) hp =0 ;
-
+        if(hp < 0) hp = 0;
     }
 
-
-    public boolean isFainted() {
+    public boolean isFainted(){
         return hp <= 0;
     }
 

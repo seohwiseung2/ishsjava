@@ -1,6 +1,6 @@
 public class NoFly implements Flyable {
     @Override
-    public void fly() {
-        System.out.println("날 수 없다");
+    public void fly(Pokemon pokemon) {
+        System.out.println(pokemon.getName() +"날 수 없다");
     }
 }

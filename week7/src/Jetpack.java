@@ -1,7 +1,7 @@
 public class Jetpack implements Flyable{
 
     @Override
-    public void fly() {
-        System.out.println("siuuuuu이 하게 날아갑니다");
+    public void fly(Pokemon pokemon) {
+        System.out.println(pokemon.getName() +"siuuuuu이 하게 날아갑니다");
     }
 }
