@@ -1,9 +1,19 @@
 public class GameDemo {
     public static void main(String[] args) {
+
+        Jetpack jetpack = new Jetpack();
+
+
         Pikachu p1 = new Pikachu(100, 27);
-        Pikachu p2 = new Pikachu(100, 28);
-        Charizard c1 = new Charizard(300, 28);
-        Squirtle s1 = new Squirtle(120, 21);
+        p1. setFlyingTool(new NoFly());
+        p1. performFlyable();
+        p1.setFlyingTool(jetpack); // 잿팩 얻음
+        p1.performFlyable();
+       // Pikachu p2 = new Pikachu(100, 28);
+        Charizard s1 = new Charizard(300, 60);
+        s1.setFlyingTool(new Wings());
+        s1. performFlyable();
+       // Squirtle s1 = new Squirtle(120, 21);
 
         System.out.println("시작");
         System.out.println(p1);
