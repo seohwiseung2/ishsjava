@@ -11,7 +11,17 @@ public class ExceptionTest {
         System.out.print("분자 입력 : ");
         int numerator = scanner.nextInt();
 
-        System.out.println(numerator/denominator);
+        if(denominator == 0) {
+            System.out.println("분모는 0이 될 수 없습니다");
+
+
+        }else{
+            System.out.println(numerator/denominator);
+        }
+
+
+
+
 
 
     }
