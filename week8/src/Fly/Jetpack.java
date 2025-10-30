@@ -1,4 +1,8 @@
-public class Jetpack implements Flyable{
+package Fly;
+
+import Pokemons.Pokemon;
+
+public class Jetpack implements Flyable {
 
     @Override
     public void fly(Pokemon pokemon) {

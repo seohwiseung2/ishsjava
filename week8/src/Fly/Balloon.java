@@ -1,4 +1,8 @@
-public class Balloon implements Flyable{
+package Fly;
+
+import Pokemons.Pokemon;
+
+public class Balloon implements Flyable {
 
 
 
