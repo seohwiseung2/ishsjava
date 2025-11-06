@@ -1,6 +1,6 @@
-package Fly;
+package fly;
 
-import Pokemons.Pokemon;
+import pokemons.Pokemon;
 
 public class Jetpack implements Flyable {
 
