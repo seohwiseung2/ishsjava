@@ -1,6 +1,6 @@
-package Pokemons;
+package pokemons;
 
-import Fly.NoFly;
+import fly.NoFly;
 
 public class Pikachu extends Pokemon {
     public Pikachu(int hp, int attackPower, NoFly noFly, Skill[] skills){
@@ -9,13 +9,12 @@ public class Pikachu extends Pokemon {
     }
 
     @Override
-    public void attack(Pokemon target) {
-        int damage = getAttackPower() + 5;
-        System.out.println(getName() + " -> " + target.getName() + "에게 '전기충격' 사용! (데미지: " + damage + ")"); // name is private
+    public void attack(Pokemon target, int choice) {
+        int damage = getAttackPower() + 5+ this.skills[choice].getDamage();
+        System.out.println(getName() + " -> " + target.getName() + "에게 "+ this.skills[choice].getName() +"사용! (데미지: " + damage + ")"); // name is private
         //target.setHp(target.getHp()-damage);;
         target.receiveDamage(damage);
 //        System.out.println(name + " -> " + target.getName() + "에게 '전기충격' 사용");  // name is protected
-        System.out.println(target.getHp() + "남은 hp" + target.getHp());
-
+        System.out.println(target.getName() + "의 남은 Hp: " + target.getHp());
     }
 }

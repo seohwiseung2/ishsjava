@@ -1,6 +1,8 @@
-package Pokemons;
+package pokemons;
 
 import Fly.Flyable;
+
+import java.util.ArrayList;
 
 public abstract class Pokemon {
     private String name;
@@ -8,9 +10,7 @@ public abstract class Pokemon {
     private int hp;
     private int attackPower;
     protected Flyable flyingTool;  // has-a (Aggregation)
-
-
-    Skill[] skills;
+    public Skill[] skills;
 
     public Pokemon(String name, int hp, int attackPower, Flyable flyingTool, Skill[] skills){
         this.name = name;
@@ -42,7 +42,7 @@ public abstract class Pokemon {
         this.flyingTool.fly(this);
     }
 
-    public abstract void attack(Pokemon target);
+    public abstract void attack(Pokemon target, int choice);
     public void receiveDamage(int damage){
         hp = hp - damage;
         if(hp < 0) hp = 0;
